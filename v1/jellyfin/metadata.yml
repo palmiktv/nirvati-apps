@@ -1,0 +1,35 @@
+version: 1
+metadata:
+  category: Media
+  name: Jellyfin
+  version: 10.8.13.1
+  tagline: Your personal media cloud
+  description: >-
+    Jellyfin is the Free Software Media System that puts you in control of managing and streaming your media. There are no strings attached, no premium licenses or features, and no hidden fees.
+  dependencies: []
+  repos:
+    Server: https://github.com/jellyfin/jellyfin
+  support: https://jellyfin.org
+  path: /
+  icon: https://jellyfin.org/images/logo.svg
+  license: GPL-2.0-or-later
+
+  developers:
+    Jellyfin: https://jellyfin.org
+
+  volumes:
+    media:
+      minimum_size: 1Gi
+      recommended_size: 20Gi
+      name: Media
+      description: All media files
+    config:
+      minimum_size: 50Mi
+      recommended_size: 200Mi
+      name: Configuration
+      description: Jellyfin configuration
+    cache:
+      minimum_size: 1Gi
+      recommended_size: 10Gi
+      name: Cache
+      description: Temporary data

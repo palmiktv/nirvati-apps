@@ -1,0 +1,15 @@
+store_version: 1
+
+id: palmen-apps
+name: PALMIK-Apps
+tagline: App Collection for Nirvati by PALMIK
+description:
+  These Apps help you in all day work. 
+developers:
+  Felix: https://palmik.eu
+license: AGPL-3.0-or-later
+icon: https://stream.palmik.eu/picture/greenpalm.png
+
+content:
+  # A map between minimum app-manager version -> apps subdir
+  v0.0.1: v1

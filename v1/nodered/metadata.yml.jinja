@@ -1,0 +1,25 @@
+version: 1
+metadata:
+  category: Smart Home
+  name: NodeRED
+  version: 3.1.5
+  tagline: Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+  description: >-
+    Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
+  dependencies: []
+  repos:
+    Server: https://nodered.org
+  support: https://nodered.org
+  path: /
+  default_password: {{ derive_entropy(identifier="pw") }}
+  icon: https://dnug.de/wp-content/uploads/2020/10/node-red-icon.png
+  license: AGPL-3.0-or-later
+  developers:
+    PiHole: https://nodered.org
+
+  volumes:
+    data:
+      minimum_size: 1Gi
+      recommended_size: 20Gi
+      name: Data
+      description: The data for Node-RED

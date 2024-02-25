@@ -1,0 +1,12 @@
+version: 1
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    public_ports:
+        1000:1000
+    mounts:
+      data:
+        config: /config
+        media: /media
+        cache: /cache

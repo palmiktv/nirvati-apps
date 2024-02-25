@@ -1,0 +1,27 @@
+version: 1
+metadata:
+  category: Security
+  name: PiHole
+  version: 2024.02.0
+  tagline: Your personal DNS and DHCP Server for ad-blocking
+  description: >-
+    Pi-hole is a network-wide ad blocker. Instead of installing adblockers on every device and every browser, you can install Pi-hole once on your network, and it will protect all of your devices. It blocks ads on any device and improves overall network performance. Pi-hole also has an API, so you can integrate it with your own software.
+  dependencies: []
+  repos:
+    Core: https://github.com/pi-hole/pi-hole
+    Dashboard: https://github.com/pi-hole/web
+    Container: https://github.com/pi-hole/docker-pi-hole
+  support: https://pi-hole.net/
+  developers:
+    PiHole: https://pi-hole.net/
+
+  path: /
+  default_password: {{ derive_entropy(identifier="pw") }}
+  icon: https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/Vortex-R.png
+  license: EUPL-1.2
+  volumes:
+    pihole:
+      minimum_size: 1Gi
+      recommended_size: 20Gi
+      name: PiHole
+      description: The data inside your PI-Hole
